@@ -20,10 +20,10 @@ add_executable(motors)
 
 pico_generate_pio_header(motors ${CMAKE_CURRENT_LIST_DIR}/quadrature_encoder.pio)
 
-target_sources(motors PRIVATE motors.c)
+target_sources(motors PRIVATE motors.cpp)
 
 # pull in common dependencies
-target_link_libraries(motors pico_stdlib hardware_uart hardware_pio hardware_timer hardware_pwm)
+target_link_libraries(motors pico_stdlib pico_multicore hardware_uart hardware_pio hardware_timer hardware_pwm)
 
 # direct serial output to USB rather than UART
 pico_enable_stdio_usb(motors 1)
