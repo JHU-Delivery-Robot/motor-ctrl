@@ -81,8 +81,6 @@ void core1_entry() {
 
                 pwm_set_chan_level(slice_2_3_num, PWM_CHAN_A, 4909 + ((float) right_speed) * (1636.0 / 100.0));
                 pwm_set_chan_level(slice_2_3_num, PWM_CHAN_B, 4909 + ((float) right_speed) * (1636.0 / 100.0));
-
-                std::cout << left_speed << "      " << right_speed << std::endl;
             }
         }
     }
