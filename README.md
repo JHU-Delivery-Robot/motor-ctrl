@@ -17,7 +17,7 @@ git clone --recurse-submodules https://github.com/JHU-Delivery-Robot/motor-ctrl.
 ```
 and from inside of `./motor-ctrl/pico-sdk` run `git submodule update --init`.
 
-Next, configure CMake with
+Next, go back into the top level of the git repository (`./`) and configure CMake with
 ```
 mkdir build
 cd build
